@@ -1,9 +1,11 @@
-// import classes from "./MeetUPList.module.css";
+import classes from "./MeetUpList.module.css";
 import MeetUpItem from "./MeetUpItem";
 
+//step 1 this gets information from DUMMY_DATA object, key,id, image is a prop 
+//for meetupitem
 function MeetupList(props) {
   return (
-    <ul className="list">
+    <ul className={classes.list}>
       {props.meetups.map((meetup) => (
         <MeetUpItem
           key={meetup.id}
@@ -11,7 +13,7 @@ function MeetupList(props) {
           image={meetup.image}
           title={meetup.title}
           address={meetup.address}
-          descriptopn={meetup.description}
+          description={meetup.description}
         />
         ))}
     </ul>
